@@ -54,6 +54,8 @@ def add_attachment():
     update = widgets.Button(description='Aggiorna') #bottone visualizzato in ogni caso
     delete = widgets.Button(description='Rimuovi allegato')
     attach_list = os.listdir(path_attachments)
+    if 'ck_points' in attach_list:
+        attach_list.remove('ck_points')
 
     if(attach_list): #si attiva se c'è almeno un elemento in lista quindi nella cartella allegati
         confirm = widgets.Button(description='Conferma')

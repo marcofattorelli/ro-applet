@@ -307,7 +307,7 @@ def create_exercise(exam_date, num, path_ex_folder, path_yaml):
     os.mkdir(path_mode_free)
     exer = read_exercise_yaml(path_yaml) # reading the given yaml
     notebook = nb.v4.new_notebook() # creating the new notebook
-    print(exer['name'])
+    #print(exer['name'])
     if exer['name'] in ('graphs_flow','graphs_trees', 'graphs_planarity','graphs_paths'):
         insert_graph_import(notebook) #required graph import
         insert_no_scroll(notebook) #no scroll of output div
